@@ -1,0 +1,189 @@
+\documentclass[a4paper,12pt]{article} 
+\usepackage{amsmath}%trae opciones para las ecuaciones (una de ellas es alinearlas)
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+\usepackage{float}
+\usepackage{subfig}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{upgreek} %otras letras griegas
+\usepackage{mathtools} %puedo poner simbolos abajo de la integral
+\usepackage{multicol}
+\usepackage{enumerate} %para enumerar una lista de cosas (tanto con numeros o letras)
+%caracteristicas de paginas
+\spanishdecimal{.} %con esto si usamos la "coma" escribe un punto.
+\usepackage{commath} %para usar \abs{a}, valor absoluto de ''a''.
+%\setlength\oddsidemargin{-0,21in}
+%\setlength\evensidemargin{-0,21in}
+%\setlength\topmargin{-2cm}
+%\setlength\textwidth{7in}
+%\setlength\textheight{9.9in}
+%\setlength{\footskip}{35pt}
+
+%%% titulo
+\title{Notas de física I}
+
+\author{Claudia Giribet}
+
+%%% final del titulo
+
+
+\begin{document}
+	\maketitle
+	\clearpage              %
+	\setcounter{page}{1}	% sirve para que cuente la pagina 2 como la pagina 1.
+\section{Cinemática}
+La cinemática es la rama de la mecánica que estudia los movimientos sin tener en cuenta las causas que los producen. Desde su punto de vista es netamente descriptivo.
+Comencemos por definir lo que es movimiento. Se dice que un objeto está en movimiento cuando cambia su posición en el tiempo. De igual forma, si su posición no cambia con el tiempo, se dice que está en reposo. Vamos a ver que tanto el concepto de movimiento como el de reposo son conceptos absolutos. Por ejemplo, supongamos que en una estación hay un tren esperando a arrancar. Un pasajero se encuentra asomado a la ventanilla, despidiéndose de alguien en el anden. En ese momento, el hombre en el anden observa que el pasajero del tren esta en reposo (i.e. no se mueve) respecto de él. Otro pasajero, que se encuentra sentado junto al primero, también observa que este se encuentra en reposo respecto de él. Es decir, la descripción del estado de movimiento del primer pasajero es la misma, tanto para el hombre del anden como para el segundo pasajero. Ahora el tren se pone en marcha. El hombre del anden observa que su amigo en el tren se aleja de él (i.e. cambia su posición en el tiempo respecto de él); y, por lo tanto, razona que su amigo está en movimiento y él está en reposo. Sin embargo, para el segundo pasajero, el estado de movimiento del primer pasajero no ha variado y sí varía el del hombre del anden. Entonces el hombre en el anden se esta moviendo respecto de ambos pasajeros. ¿Quién tiene razón? Tanto el peatón como el segundo pasajero, lo único que ha cambiado es el punto de vista del observador. La moraleja es que para referir a un sistema en movimiento hace falta un observador o sistema de referencia. El peatón define al anden como su sistema de referencia, el anden esta en reposo respecto de él, por lo tanto, cualquier objeto que cambie su posición respecto del anden estará en movimiento respecto de este. El segundo pasajero define como sus sistema de referencia al tren y, por lo tanto, el peatón esta en movimiento respecto de él. Ninguno de los dos sistemas es absoluto, uno puede decirse que está en reposo y el otro en movimiento, sino solo hablando en forma relativa (i.e. en reposo o en movimiento respecto de él). Aunque pareciera natural elegir el anden como sistema en reposo, observen que este se encuentra moviéndose con la Tierra respecto del Sol, que el Sol se encuentra moviéndose respecto de las estrellas y así se podría seguir. Entonces, cuando se habla de un sistema en movimiento, siempre hay que referirlo a algún sistema de referencia. %(Hoja2)
+\par Vamos a analizar como se especifica la posición de un objeto. Si el objeto es extenso (Por ejemplo, el triangulo de la Fig.1), el observador O puede elegir: 
+\begin{enumerate}[a)]
+\item Un punto del objeto (A) y ver a que distancia, dirección y sentido se haya respecto de él (Por ejemplo, el vector que va desde O hasta A). La variación de la posición de A nos va a estar mostrando como se traslada todo el cuerpo. En este caso, estamos ante un movimiento de traslación.
+\item Si el objeto esta girando, lo anterior no basta y hay que dar la orientación del objeto, por ejemplo, como varía la posición de B respecto de A. En este caso, estamos ante un movimiento de rotación.
+\end{enumerate}
+\begin{figure}[H]
+\centering
+\includegraphics[angle=0,width=6cm]{Imagenes/f1.pdf}
+\caption{}
+\label{1}
+\end{figure}
+\par Por otro lado, un objeto puntual es aquel cuyas dimensiones son despreciables frente a las distancias típicas del problema. Por ejemplo, un avión en vuelo para un observador en tierra.
+Si el objeto se puede considerar puntual, no tiene sentido hablar de su orientación, i.e. no se puede hablar de rotación, entonces, el movimiento más general de un objeto puntual es una traslación. Igualmente, si se trata de un objeto extenso trasladándose (i.e. basta conocer el movimiento de un punto para conocer el de todos), se lo puede considerar puntual. Un ejemplo de esto último es un tren circulando por la vía.
+\par De acuerdo a (a), la posición se conoce si se conoce el segmento orientado desde el punto de referencia O al punto A. O mejor dicho, su vector posición. Como el movimiento se realiza en el espacio conviene platear un sistema de coordenadas para poder describir al vector posición, por ejemplo, ejes cartesianos.
+\par Notar que sistema de referencia no es igual a sistema de coordenadas.
+Sistema de referencia: Sistema al cual se refiere el movimiento.
+Sistema de coordenadas: Se adosa al sistema de referencia para describir el movimiento. %%%%%%%%%%%%%%%%%%(Hoja3)
+\par Por ejemplo:
+Imagen a  izquierda.
+$\overrightarrow{r_{A}}$ da la posición de A desde el sistema de referencia O.
+$\overrightarrow{r_{A}}'$ da la posición de A desde el sistema de referencia O'.
+Entonces estoy cambiando de sistema de referencia.
+
+$(x,y,z)$ y $(x',y',z')$ son dos sistemas de coordenadas adosados al sistema de referencia O. el vector $\overrightarrow{r_{A}}$ es el mismo pero cambia sus descripción ( $(x_{A},y_{A},z_{A})$ o $(x'_{A},y'_{A},z'_{A})$ )
+
+Supongamos un sistema A en movimiento respecto del observador o sistema de referencia O.
+Imagen a la izquierda.
+El vector posición sigue a A en su movimiento. Su extremo describe la curva que A describe en el espacio. Esa curva se denomina trayectoria(N) y caracteriza al movimiento.
+Para estudiar el movimiento de traslación nos interesa conocer:
+-La trayectoria (curva que describe en el espacio).
+-Magnitudes físicas que lo describen.
+\subsection*{Grados de libertad y vínculos}
+La trayectoria siempre es una curva en el espacio, sin embargo, se observa que no es exactamente lo mismo describir el movimiento de:
+1)Una mosca moviéndose libremente en la habitación
+2)Una mosca moviéndose sobre una mesa.
+3)Una mosca moviéndose sobre un hilo tenso.
+En (1) se necesitan 3 ejes coordenados para describir el movimiento, mientras que en (2) bastan solo 2 y en (1) solo 1.
+Se dice que un sistema tiene $n$ $grados$ $de$ $libertad$ si se requieren n parámetros independientes para fijar su posición. Cada grado de libertad corresponde a una posibilidad de movimiento. En el caso de la traslación el movimiento puede tener hasta 3 grados de libertad.
+ ¿Cuando se tienen menos? Cuando hay condiciones materiales que limitan el movimiento (vínculos). Ejemplo: una hormiga se mueve sobre la superficie de una piedra. Esa superficie esta caracterizada por $z=f(x,y)$.Entonces tengo 2 parámetros independientes, $x$ e $y$, entonces tengo 2 grados de libertad.
+
+\section*{Movimiento unidimensional rectilíneo}
+(HOJA4)En el espacio, basta con trabajar con un eje cartesiano. La trayectoria es una recta, entonces se hace coincidir el eje de coordenadas con las trayectoria.
+\par GRAFICO 5
+\par Supongamos que se quiere conocer la rapidez con que cambia la posición con $t$:\\
+Al tiempo $t$, el móvil se encuentra en $x(t)$. Un $\Delta t$ después, al tiempo $t+\Delta t$, se encuentra en $x(t+\Delta t)$.\\
+Defino que en ese $\Delta t$, la ‘‘rapidez media’’ fue:
+\begin{equation}
+<\overrightarrow{v_x}>=\frac{\Delta x}{\Delta t}\hat{x}=\frac{x(t+\Delta t)- x(t)}{\Delta t} \hat{x}
+\end{equation}
+A esa ‘‘rapidez media’’ se la llama velocidad media.
+\par Si se quiere saber la rapidez con que cambia instante a instante, tomo un $\Delta t$ cada vez más chico:
+\begin{equation}
+\lim\limits_{\Delta t \rightarrow 0}\displaystyle\frac{x(t+\Delta t)- x(t)}{\Delta t} \hat{x}\equiv \frac{dx(t)}{dt}\hat{x}\equiv\dot{x}(t)\hat{x}=v_{x}(t)\hat{x}
+\end{equation}
+$v_{x}(t)$ se llama la velocidad instantánea (o velocidad a secas) en la dirección $x$. Obsérvese que su valor es igual a la pendiente de la recta tangente a la curva horaria en cada punto. %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%(HOJA5)
+\par Veamos su característica. La velocidad es un vector. En general vamos a ver que
+\begin{equation}
+\vec{v}=\displaystyle\frac{d\vec{r}(t)}{dt}
+\end{equation}
+En nuestro caso (movimiento unidimensional):$\overrightarrow{r}(t)=x(t)\hat{x}$\\
+$\overrightarrow{v}=\displaystyle\frac{dx(t)}{dt}\hat{x}$\\
+Con $\hat{x}$ marcando la dirección del sentido, $dx$ la rapidez con que cambia la coordenada y $dt$ el sentido del movimiento.\\
+La velocidad es tangente a la trayectoria punto a punto. Queda claro que es tangente a la curva horaria. Se puede ver que es también tangente a la trayectoria.\\
+Grafico 6.\\
+$\overrightarrow{v}=\lim\limits_{\Delta t\rightarrow 0}\displaystyle\frac{\overrightarrow{r}(t+\Delta t)-\overrightarrow{r}(t)}{\Delta t}=\lim\limits_{\Delta t\rightarrow 0}\displaystyle\frac{\Delta\overrightarrow{r}}{\Delta t}\Rightarrow \overrightarrow{v}//\Delta\overrightarrow{r}(\Delta t\rightarrow 0)$ y $\Delta\overrightarrow{r}$ es tangente a la curva para $\Delta t\rightarrow 0$.\\
+Ejemplo:
+Supongamos que $x(t)$ varia de la siguiente forma:\\
+Grafico 7.\\
+De la curva vemos que (observando el valor de la pendiente en cada punto):\\
+\begin{equation}
+v_{A},v_{B}>0; v_{A}>v_{B}\\
+v_{C}=0\\
+v_{D},v_{E}<0; |v_{E}|>|v_{D}|    
+\end{equation}
+
+
+\par De la misma manera se pueden definir la rapidez media e instantánea con que cambia la velocidad. Esa rapidez se denomina aceleración. Siguiendo el mismo proceso que antes resulta que:
+\begin{align}
+\vec{a}(t)&=\frac{d\vec{v}}{dt}= \frac{d^{2}\vec{r}(t)}{dt^{2}} \\
+\vec{a}(t)&=\dot{\vec{v}}(t)=\ddot{\vec{r}}(t)
+\end{align}
+
+En nuestro caso
+\begin{align}
+\vec{a}_{x}(t)=\dot{v}_x\hat{x}=\ddot{x}\hat{x}
+\end{align}
+
+Por analogía con lo anterior se ve que la aceleración es tangente a la curva $v(t)$ en cada punto. Por ejemplo:\\
+Grafico 8\\
+$a_{A},a_{B}>0$; $a_{A}>a_{B}$\\
+$a_{C}=0$\\
+$a_{D},a_{E}<0; |a_{E}|>|a_{D}|$\\
+\par (HOJA 6) Analicemos el gráfico anterior:\\
+$\forall t, v\ge0$ Entonces el m\'ovil avanza $\forall t$ hacia $x>0$. Sin embargo:\\
+$t_{A}<t<t_{C}: a>0 \Rightarrow v$ aumenta.\\
+$t_{C}<t<t_{E}: a<0 \Rightarrow v$ disminuye.\\
+Representando la trayectoria:\\
+Grafico 9\\
+\textquestiondown ¿Qué pasa en E?\\
+La aceleración con igual sentido que la velocidad aumenta esta, mientras que una aceleración contraria a la velocidad disminuye su modulo. Es un error decir que una aceleración negativa disminuye $v$; que la velocidad aumente o disminuya depende del sentido relativo de la aceleración.\\
+
+\begin{multicols}{2}
+$\left.\begin{array}{rcl}\overrightarrow{a} \longrightarrow\\ 
+\overrightarrow{v} \longrightarrow \end{array}\right\}$ $\overrightarrow{v}$ aumenta.\\
+$\left.\begin{array}{rcl}\overrightarrow{a} \longrightarrow\\ 
+\overrightarrow{v} \longleftarrow \end{array}\right\}$ $\overrightarrow{v}$ disminuye.\\
+\end{multicols}
+
+\begin{multicols}{2}
+$\left.\begin{array}{rcl}\overrightarrow{a} \longleftarrow\\ 
+\overrightarrow{v} \longrightarrow \end{array}\right\}$ $\overrightarrow{v}$ disminuye.\\
+$\left.\begin{array}{rcl}\overrightarrow{a} \longleftarrow\\ 
+\overrightarrow{v} \longleftarrow \end{array}\right\}$ $\overrightarrow{v}$ aumenta\\
+\end{multicols}
+\begin{multicols}{2}
+$\left.\begin{array}{rcl}\overrightarrow{a} \longrightarrow\\ 
+\overrightarrow{v} \longrightarrow \end{array}\right\}$ 
+\end{multicols}
+\begin{align*}
+\left.\begin{array}{c l}
+x & x>0 \\
+-x & x<0
+\end{array}\right\}
+\end{align*}
+\begin{align*}
+\left\{\begin{array}{c l}
+x & x>0 \\
+-x & x<0
+\end{array}\right.
+\end{align*}
+
+En general, si se conoce $\overrightarrow{v}(t)= v(t)\hat{x}$, se puede llegar a conocer $x(t)$ :\\
+\begin{equation}
+\overrightarrow{v}(t)dt = \displaystyle\frac{dx(t)}{dt}dt \Rightarrow v(t)dt = dx
+\end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%(Hoja 8)
+\subsection{Caída libre}
+Un caso muy importante de MRUV lo constituye la caída de los cuerpos bajo la acción de la atracción gravitatoria. Se debe a Galileo el descubrimiento que todos los cuerpos están cerca de la superficie de la Tierra caen hacia ella con una aceleración constante, dirigida hacia el centro de la Tierra, independiente de la forma, tamaño y material que los compone. Esta acelación se denomina \textit{aceleración de la gravedad} y la denotamos con $\vec{g}$. Si $\abs{\vec{g}} = g$, el valor de $g$ depende del lugar de la Tierra y la altura sobre el nivel del mar. Al nivel del mar $g = 9.8 \ m/s^2$.
+\par Supongamos un cuerpo que a $t = 0$ se lo deja caer desde una altura $h$ con velocidad inicial $\vec{v}_z = v_0\hat{z}$. 
+
+IMAGEN
+
+\par De acuerdo a lo que vimos
+\begin{align}
+z(t) = z(t=0) + v_z(t=0)t + \frac{1}{2}a_z t^2
+\end{align}
+
+
+\end{document} 
